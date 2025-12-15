@@ -20,9 +20,9 @@ import Loading from '../Loading/Loading'
    componentDidMount(){
     RestClient.getRequest(AppUrl.FooterData).then(result=>{
       this.setState({
-        address:result[0]['address'],
-        email:result[0]['email'],
-        phone:result[0]['phone'],
+        // address:result[0]['address'],
+        // email:result[0]['email'],
+        // phone:result[0]['phone'],
         Loading:false 
       });
     })
