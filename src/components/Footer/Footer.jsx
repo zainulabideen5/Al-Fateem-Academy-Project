@@ -29,12 +29,12 @@ import Loading from '../Loading/Loading'
      componentDidMount(){
         RestClient.getRequest(AppUrl.FooterData).then(result=>{
            this.setState({
-             address:result[0]['address'],
-             email:result[0]['email'],
-             phone:result[0]['phone'],
-             facebook:result[0]['facebook'],
-             youtube:result[0]['youtube'],
-             twitter:result[0]['twitter'],
+             // address:result[0]['address'],
+             // email:result[0]['email'],
+             // phone:result[0]['phone'],
+             // facebook:result[0]['facebook'],
+             // youtube:result[0]['youtube'],
+             // twitter:result[0]['twitter'],
              footer_credit:result[0]['footer_credit'],
              Loading:false
            }); 
