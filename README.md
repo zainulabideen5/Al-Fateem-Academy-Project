@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Al-Fateem Academy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website for Al-Fateem Academy, a learning community. Visitors can browse courses, see the academy's projects and services, read client reviews and get in touch. All content comes from a Laravel API, so the academy updates the site from its admin panel instead of editing code.
 
-## Available Scripts
+Backend and admin panel: [laravel-backend-react](https://github.com/zainulabideen5/laravel-backend-react)
 
-In the project directory, you can run:
+## Pages
 
-### `npm start`
+| Page | Content |
+|---|---|
+| Home | Hero, intro video, services, featured courses, recent projects, stats charts, client reviews |
+| Courses | All courses, with a detail page for each one |
+| Services | Everything the academy offers |
+| Portfolio | Projects, with a detail page for each one |
+| About | About the academy, with a typing animation |
+| Contact | Contact form that sends the message to the backend |
+| Privacy, Terms, Refund | Policy pages |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Content loaded from the REST API with Axios
+- Loading states while data is fetched
+- Animated counters and charts (React CountUp, Recharts)
+- Review slider (React Slick)
+- Video player for the intro video
+- Responsive layout with React Bootstrap
 
-### `npm test`
+## Tech stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React (Create React App)
+- React Router
+- React Bootstrap and Bootstrap
+- Axios
+- Recharts, React Slick, React CountUp, Video React
+- Font Awesome
 
-### `npm run build`
+## Getting started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the [backend](https://github.com/zainulabideen5/laravel-backend-react) first, then point the frontend at it in `src/RestAPI/AppUrl.jsx`:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```js
+static BaseURL = "http://localhost:8000/api";
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Then:
 
-### `npm run eject`
+```bash
+npm install
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The site opens at `http://localhost:3000`. For a production build:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+  pages/       one component per route
+  components/  sections used across pages
+  router/      route definitions
+  RestAPI/     API URLs and the Axios client
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built by [Zain Ul Abideen](https://github.com/zainulabideen5)
